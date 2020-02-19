@@ -61,7 +61,7 @@ eigval_car,eigvec_car = np.linalg.eig(cov_car)
 plt.figure()
 porc_car=[]
 for i in range(11):
-    porc_car.append(np.sum(eigval_car[:i+1])*10)
+    porc_car.append(np.sum(eigval_car[:i+1])*100/11)
 x1_car=np.arange(1,12)
 plt.plot(x1_car,porc_car)
 plt.scatter(x1_car,porc_car)
