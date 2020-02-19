@@ -51,7 +51,7 @@ plt.close()
 
 #Para los Carros
 datos_car=pd.read_csv('Cars93.csv')
-tit_car=['Price', 'MPG.city', 'EngineSize', 'Horsepower', 'RPM','Fuel.tank.capacity', 'Length', 'Width', 'Turn.circle', 'Weight']
+tit_car=['MPG.city', 'MPG.highway', 'EngineSize', 'Horsepower', 'RPM', 'Rev.per.mile','Fuel.tank.capacity', 'Length', 'Width', 'Turn.circle', 'Weight']
 dat_carros=datos_car[tit_car]
 dat_carros=(dat_carros-dat_carros.mean())/dat_carros.std()
 cov_car=np.cov(dat_carros.T)
